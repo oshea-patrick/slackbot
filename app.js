@@ -11,8 +11,15 @@ const client = new WebClient(token, {
 });
 app.use('/', slackEvents.expressMiddleware())
 slackEvents.on("message", async(event) => {
-    console.log(event)
-})
+    if(!event.subtype && !event.bot_id)
+        client.chat.postMessage({
+            token, 
+            channel: event.channel, 
+            thread_ts: event.ts, 
+            text: "Hello World!"
+        })
+    }
+)
 //YOUR CODE HERE
 app.listen(PORT, () => {
     console.log(`App listening at http://localhost:${PORT}`)
