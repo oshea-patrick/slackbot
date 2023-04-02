@@ -1,0 +1,28 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oshea-patrick/slackbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oshea-patrick/slackbot/issues"
+  },
+  "homepage": "https://github.com/oshea-patrick/slackbot#readme",
+  "dependencies": {
+    "@slack/events-api": "^3.0.1",
+    "@slack/web-api": "^6.8.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "firebase": "^9.19.1",
+    "firebase-tools": "^11.25.2"
+  }
+}
